@@ -1,0 +1,10 @@
+version: '3'
+services:
+  pulsar:
+    image: apachepulsar/pulsar
+    container_name: pulsar_sentiment
+    ports:
+      - "8080:8080"
+      - "6650:6650"
+    entrypoint: bin/pulsar standalone -nss   
+    
